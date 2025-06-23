@@ -41,21 +41,21 @@ app.listen(port, ()=>
 
 // path parameters
 
-app.get("/", (req, res) =>{
-    res.send("you contacted root path")
-});
+// app.get("/", (req, res) =>{
+//     res.send("you contacted root path")
+// });
 
-app.get("/:username/:id", (req, res) =>{
-    let {username, id} = req.params;
-    let htmlStr = `<h2>username =  ${username} , id = ${id}.</h2>`
-    res.send(htmlStr);
-});
+// app.get("/:username/:id", (req, res) =>{
+//     let {username, id} = req.params;
+//     let htmlStr = `<h2>username =  ${username} , id = ${id}.</h2>`
+//     res.send(htmlStr);
+// });
 
-// Query selector
-app.get("/search", (req, res) =>{
-    let {q} = req.query;
-    if(!q){
-        res.send(`<h2>nothing searched</h2>`)
-    }
-    res.send(`Search results for ${q}`)
-});
+// // Query selector
+// app.get("/search", (req, res) =>{
+//     let {q} = req.query;
+//     if(!q){
+//         res.send(`<h2>nothing searched</h2>`)
+//     }
+//     res.send(`Search results for ${q}`)
+// });
